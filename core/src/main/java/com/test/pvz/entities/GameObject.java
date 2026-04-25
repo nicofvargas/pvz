@@ -39,7 +39,7 @@ public abstract class GameObject {
 
     /**
      * Dibuja la imagen, usar solo cuando ya esten las imagenes.
-     * Este método debe ser llamado obligatoriamente entre {@code batch.begin()} y {@code batch.end()}.
+     * Este metodo debe ser llamado obligatoriamente entre {@code batch.begin()} y {@code batch.end()}.
      * @param batch El {@link SpriteBatch} que gestiona el envío de texturas a la placa de video.
      */
     public void dibujar(SpriteBatch batch) {
