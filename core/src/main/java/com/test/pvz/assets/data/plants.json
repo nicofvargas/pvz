@@ -1,0 +1,9 @@
+{
+  "lanzaguisantes": {
+    "vida": 100,
+    "costo": 100,
+    "ancho": 64,
+    "alto": 64,
+    "cooldownAtaque": 1.5
+  }
+}
