@@ -6,11 +6,7 @@ import com.test.pvz.utils.GameData;
 
 public class Guisante extends Proyectil {
 
-    public Guisante(float x, float y) {
-        this(x,y, GameData.getProyectil("guisante_basico"));
-    }
-
-    private Guisante(float x, float y, JsonValue stats) {
+    public Guisante(float x, float y, JsonValue stats) {
         super(
             x,
             y,

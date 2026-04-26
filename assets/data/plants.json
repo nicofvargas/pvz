@@ -4,6 +4,15 @@
     "costo": 100,
     "ancho": 64,
     "alto": 64,
-    "cooldownAtaque": 1.5
+    "cooldownAtaque": 1.5,
+    "cooldownPlanta": 7.5
+  },
+  "girasol": {
+    "vida": 300,
+    "costo": 50,
+    "ancho": 64,
+    "alto": 64,
+    "cooldownProduccion": 24.25,
+    "cooldownPlanta": 7.5
   }
 }

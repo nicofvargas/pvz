@@ -5,11 +5,10 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.utils.Array;
 import com.test.pvz.entities.Planta;
 import com.test.pvz.entities.Proyectil;
-import com.test.pvz.interfaces.Actualizable;
 import com.test.pvz.interfaces.Lanzador;
-import com.test.pvz.interfaces.ProyectilSpawner;
+import com.test.pvz.interfaces.Spawner;
 
-public class EntitiesManager implements ProyectilSpawner {
+public class EntitiesManager implements Spawner {
     private Array<Planta> plantas;
     private Array<Proyectil> proyectiles;
 
