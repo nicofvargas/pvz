@@ -1,6 +1,8 @@
 package com.test.pvz.entities;
 
-public abstract class Proyectil extends GameObject {
+import com.test.pvz.interfaces.Actualizable;
+
+public abstract class Proyectil extends GameObject implements Actualizable {
     protected float velocidad;
     protected int damage;
 

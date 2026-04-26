@@ -1,6 +1,8 @@
 package com.test.pvz.entities;
 
-public abstract class Planta extends EntidadViva{
+import com.test.pvz.interfaces.Actualizable;
+
+public abstract class Planta extends EntidadViva implements Actualizable {
     protected int costoSoles;
 
     public Planta(float x, float y, float ancho, float alto, int vida, int costoSoles) {

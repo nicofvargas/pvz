@@ -3,12 +3,16 @@ package com.test.pvz.entities.plantas.ataque;
 import com.badlogic.gdx.utils.JsonValue;
 import com.test.pvz.entities.EntidadViva;
 import com.test.pvz.entities.Planta;
-import com.test.pvz.interfaces.Ataque;
+import com.test.pvz.entities.proyectiles.Guisante;
+import com.test.pvz.interfaces.Atacante;
+import com.test.pvz.interfaces.Lanzador;
+import com.test.pvz.interfaces.ProyectilSpawner;
 import com.test.pvz.utils.GameData;
 
-public class Lanzaguisantes extends Planta implements Ataque {
+public class Lanzaguisantes extends Planta implements Atacante, Lanzador {
     private float acumuladorTiempo=0;
     private float cooldownAtaque;
+    private ProyectilSpawner spawner;
 
     //aca en el constructor publico hago uso de uno privado para poder pasarle los datos del json correctamente
     //sino da error porque el super debe estar siempre en primera linea y no podia obtener los datos del json
@@ -31,11 +35,24 @@ public class Lanzaguisantes extends Planta implements Ataque {
 
     @Override
     public void actuar(float delta) {
+        this.acumuladorTiempo+=delta;
 
+        if(this.acumuladorTiempo>=this.cooldownAtaque) {
+            this.atacar(null);
+            this.acumuladorTiempo-=this.cooldownAtaque;
+        }
     }
 
     @Override
     public void atacar(EntidadViva entidad) {
+        if (spawner!=null) {
+            spawner.agregarProyectil(new Guisante(this.x,this.y));
+            System.out.println("Disparando guisante"); //debug
+        }
+    }
 
+    @Override
+    public void setSpawner(ProyectilSpawner spawner) {
+        this.spawner=spawner;
     }
 }

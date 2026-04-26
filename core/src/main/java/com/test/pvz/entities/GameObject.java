@@ -56,5 +56,4 @@ public abstract class GameObject {
         shape.rect(hitbox.x, hitbox.y, hitbox.width, hitbox.height);
     }
 
-    public abstract void actuar(float delta);
 }

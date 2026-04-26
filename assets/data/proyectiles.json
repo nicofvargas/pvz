@@ -1,0 +1,8 @@
+{
+  "guisante_basico": {
+    "ancho": 16,
+    "alto": 16,
+    "velocidad": 200,
+    "damage": 20
+  }
+}
