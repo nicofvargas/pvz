@@ -3,7 +3,8 @@ package com.test.pvz.entities.plantas.ataque;
 import com.badlogic.gdx.utils.JsonValue;
 import com.test.pvz.entities.EntidadViva;
 import com.test.pvz.entities.Planta;
-import com.test.pvz.entities.proyectiles.Guisante;
+import com.test.pvz.entities.Proyectil;
+import com.test.pvz.factories.ProyectilFactory;
 import com.test.pvz.interfaces.Atacante;
 import com.test.pvz.interfaces.Lanzador;
 import com.test.pvz.interfaces.Spawner;
@@ -12,6 +13,7 @@ public class Lanzaguisantes extends Planta implements Atacante, Lanzador {
     private float acumuladorTiempo=0;
     private float cooldownAtaque;
     private Spawner spawner;
+    private ProyectilFactory proyectil;
 
     public Lanzaguisantes(float x, float y, JsonValue stats) {
         super(
@@ -39,7 +41,8 @@ public class Lanzaguisantes extends Planta implements Atacante, Lanzador {
     @Override
     public void atacar(EntidadViva entidad) {
         if (spawner!=null) {
-            spawner.agregarEntidad(new Guisante(this.x,this.y));
+            Proyectil p = proyectil.crearProyectil(this.x, this.y);
+            spawner.agregarEntidad(p);
             System.out.println("Disparando guisante"); //debug
         }
     }
@@ -47,5 +50,15 @@ public class Lanzaguisantes extends Planta implements Atacante, Lanzador {
     @Override
     public void setSpawner(Spawner spawner) {
         this.spawner=spawner;
+    }
+
+    /**
+     * clase que implementa esta interfaz debe agregar el atributo ProyectilFactory
+     *
+     * @param proyectil se carga al atributo ProyectilFactory
+     */
+    @Override
+    public void setProyectilFactory(ProyectilFactory proyectil) {
+        this.proyectil=proyectil;
     }
 }

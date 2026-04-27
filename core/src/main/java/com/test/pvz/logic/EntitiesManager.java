@@ -1,4 +1,4 @@
-package com.test.pvz.core;
+package com.test.pvz.logic;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;

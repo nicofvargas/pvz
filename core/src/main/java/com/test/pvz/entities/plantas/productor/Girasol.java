@@ -2,15 +2,14 @@ package com.test.pvz.entities.plantas.productor;
 
 import com.badlogic.gdx.utils.JsonValue;
 import com.test.pvz.entities.Planta;
-import com.test.pvz.entities.Proyectil;
 import com.test.pvz.interfaces.Productor;
 import com.test.pvz.interfaces.Spawner;
 
-public class Girsaol extends Planta implements Productor {
+public class Girasol extends Planta implements Productor {
     private Spawner spawner;
     private float cooldown;
     private float acumuladorTiempo = 0;
-    public Girsaol(float x, float y, JsonValue stats) {
+    public Girasol(float x, float y, JsonValue stats) {
         super(x,
             y,
             stats.getFloat("ancho"),

@@ -7,7 +7,7 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.test.pvz.PvzGame;
-import com.test.pvz.core.EntitiesManager;
+import com.test.pvz.logic.EntitiesManager;
 
 public class PantallaJuego implements Screen {
     private final PvzGame game;

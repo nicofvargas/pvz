@@ -1,8 +1,9 @@
-package com.test.pvz.entities.plantas.productor;
+package com.test.pvz.factories.plantas.productor;
 
 import com.badlogic.gdx.utils.JsonValue;
 import com.test.pvz.entities.Planta;
-import com.test.pvz.entities.PlantaFactory;
+import com.test.pvz.entities.plantas.productor.Girasol;
+import com.test.pvz.factories.PlantaFactory;
 import com.test.pvz.interfaces.Spawner;
 import com.test.pvz.utils.GameData;
 
@@ -16,7 +17,7 @@ public class GirasolFactory extends PlantaFactory {
     public Planta crearPlanta(float x, float y) {
         JsonValue stats = GameData.getPlanta("girasol");
 
-        Girsaol girasol = new Girsaol(x,y,stats);
+        Girasol girasol = new Girasol(x,y,stats);
         girasol.setSpawner(spawner);
 
         return girasol;

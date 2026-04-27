@@ -1,0 +1,17 @@
+{
+  "solChico":{
+    "ancho": 10,
+    "alto": 10,
+    "valor": 15
+  },
+  "solNormal":{
+    "ancho": 20,
+    "alto": 20,
+    "valor": 25
+  },
+  "solGrande": {
+    "ancho": 30,
+    "alto": 30,
+    "valor": 50
+  }
+}

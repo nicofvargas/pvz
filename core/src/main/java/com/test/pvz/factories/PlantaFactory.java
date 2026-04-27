@@ -1,4 +1,6 @@
-package com.test.pvz.entities;
+package com.test.pvz.factories;
+
+import com.test.pvz.entities.Planta;
 
 public abstract class PlantaFactory {
 
